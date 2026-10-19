@@ -1,18 +1,25 @@
+
 void main() {
-  var nilai = [80.0, 90.0, 100.0];
+  List<int> nilai = [90, 80, 85, 75, 90];
 
-  double jumlahNilai = nilai[0] + nilai[1] + nilai[2];
-  double rataRata = jumlahNilai / 3;
+  double total = 0;
 
-  print("Rata-rata : $rataRata");
-
-  if (rataRata >= 90) {
-    print("Grade : A");
-  } else if (rataRata >= 80) {
-    print("Grade : B");
-  } else if (rataRata >= 70) {
-    print("Grade : C");
-  } else {
-    print("Grade : D");
+  for (int n in nilai) {
+    total += n;
   }
+
+  double rataRata = total / nilai.length;
+
+  String grade;
+  if (rataRata >= 85) {
+    grade = "A";
+  } else if (rataRata >= 70) {
+    grade = "B";
+  } else {
+    grade = "C";
+  }
+
+  print("Daftar nilai: $nilai");
+  print("Rata-rata: $rataRata");
+  print("Grade: $grade");
 }

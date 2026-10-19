@@ -7,24 +7,22 @@ class Mahasiswa {
   Mahasiswa(this.nama, this.nim, this.ipk);
 
   void info() {
-    print('Nama: $nama, NIM: $nim, IPK: $ipk');
+    print("Nama: $nama, NIM: $nim, IPK: $ipk");
   }
 }
 
 void main() {
-  List<Mahasiswa> daftarMahasiswa = [
-    Mahasiswa('bagus', '301251005', 3.33),
-    Mahasiswa('setyo', '3012410055', 3.66),
-    Mahasiswa('nugroho', '3012310050', 3.99),
+  List<Mahasiswa> mahasiswa = [
+    Mahasiswa("Bagus", "3012410046", 3.80),
+    Mahasiswa("Andi", "3012410047", 3.20),
+    Mahasiswa("Budi", "3012410048", 3.60),
   ];
 
-  print(
-    'Daftar Mahasiswa yang mendapatkan predikat Cum Laude (IPK >= 3.5)',
-  );
+  print("Mahasiswa dengan IPK >= 3.5:");
 
-  for (Mahasiswa mhs in daftarMahasiswa) {
-    if (mhs.ipk >= 3.5) {
-      mhs.info();
+  for (Mahasiswa m in mahasiswa) {
+    if (m.ipk >= 3.5) {
+      m.info();
     }
   }
 }
